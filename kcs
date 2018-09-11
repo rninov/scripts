@@ -9,7 +9,7 @@ HELP="Usage: kcs [ context-name | none | list ]"
 
 # Ensure that only a single parameter was passed
 # Display help text if more than 1 parameter was supplied
-if [ "$#" -ne 1 ] || [ "$#" -ne 2 ]; then
+if [ "$#" -ne 1 ] && [ "$#" -ne 2 ]; then
     echo "Error: Incorrect number of parameters; please supply only a valid Kubernetes context or valid command"
     echo
     echo $HELP
