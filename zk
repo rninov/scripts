@@ -28,7 +28,7 @@ case "$OSTYPE" in
 esac
 
 # Test to ensure the user passed at least one parameter (the subcommand)
-if [ ! "$#" -ge 1 ]; then
+if [ "$#" -lt 1 ]; then
     echo -e "No valid subcommand was provided, exiting\n"
     echo $HELP
     exit 1
